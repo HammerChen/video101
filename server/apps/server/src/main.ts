@@ -7,9 +7,10 @@ async function bootstrap() {
   app.enableCors()
 
   const options = new DocumentBuilder()
-    .setTitle('Video101-后台管理API')
-    .setDescription('供后台管理调用的服务端API')
+    .setTitle('Video101-前端API')
+    .setDescription('供网站和APP调用的服务端API')
     .setVersion('1.0')
+    .addBearerAuth()
     .build()
   const document = SwaggerModule.createDocument(app, options)
   SwaggerModule.setup('api-docs', app, document)
